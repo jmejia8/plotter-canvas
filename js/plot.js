@@ -20,6 +20,7 @@ function plot (x,y, color) {
         case 'r': ctx.strokeStyle='red';break;
         case 'o': ctx.strokeStyle='orange';break;
         case 'p': ctx.strokeStyle='purple';break;
+        case 'k': ctx.strokeStyle='black';break;
     }
     for (var i = 0; i < n; i++) {
         ctx.lineTo(origenX(x[i]),origenY(y[i]),1,1);
