@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Graficador de funciones</title>
+<style type="text/css">
+/*==============         inicio      ===================*/
+body{
+	background: black;
+}
+div.big-box{
+	margin: auto;
+	width: 800px;
+	height: 1000px;
+	background: white;
+	border: 1px solid gray;
+	padding: 5px;
+}
+div.titulo{
+	text-align: center;
+}
+div.caja-ploter{
+	text-align: center;
+}
+#plotter{
+	/*width: 500px;
+	height: 500px;*/
+	border: 1px solid red;
+	/*padding: 5px;*/
+}
+.controles{
+	margin: auto;
+	margin-top: 5px;
+	width: 500px;
+	/*height: 70px;*/
+	border: 1px solid red;
+	/*padding: 5px;*/
+	text-align: right;
+}
+.boton-graf{
+	/*float: right;*/
+}
+textarea.text{
+	width: 99%;
+	height: 97%;
+	margin-top: 10px;
+}
+.input-mini{
+	width: 50px;
+}
+div.texto-centro{
+	text-align: center;
+}
+/*==============         Fin         ===================*/
+</style>
+<script type="text/javascript" src="js/plot.js"></script>
+</head>
+<body>
+<div class="big-box">
+	<div class="titulo">
+		<h1>Plotter on line</h1>
+	</div>
+	<div class="caja-ploter">
+		<canvas id="plotter" width="500" height="500">Error cargando graficador</canvas>
+	</div>
+	<div class="controles">
+		<div class="texto-centro">
+			<label>x-min: <input class="input-mini" placeholder="-1"></label>
+			<label>x-max: <input class="input-mini" placeholder="1"></label>
+			<label>y-min: <input class="input-mini" placeholder="-1"></label>
+			<label>y-max: <input class="input-mini" placeholder="1"></label>
+		</div>
+		<textarea class="text"></textarea>
+		<button class="boton-graf" onclick="generar_funcion()">Graficar</button>
+	</div>
+</div>
+</body>
+<html>
